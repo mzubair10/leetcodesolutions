@@ -7,7 +7,7 @@ const reverse = function(x) {
         reversedNumberArr.push(absoluteValOfX % 10);
         absoluteValOfX = Math.floor(absoluteValOfX/10);
     }
-    let reversedNumber = x >= 0 ? +Number(reversedNumberArr.join("")) : -Number(reversedNumberArr.join(""));
+    const reversedNumber = x >= 0 ? +Number(reversedNumberArr.join("")) : -Number(reversedNumberArr.join(""));
     if (Math.abs(reversedNumber) > maxValueAllowed) {
         return 0;
     }
