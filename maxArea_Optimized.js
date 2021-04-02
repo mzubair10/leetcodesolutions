@@ -4,7 +4,7 @@ const maxArea = function(height){
     let rightPointer = height.length;
     let maxAreaAvailable = 0;
     while(leftPointer < rightPointer){
-        let counter = (rightPointer - leftPointer - 1);
+        const counter = (rightPointer - leftPointer - 1);
         if (height[leftPointer] <= height[rightPointer-1]){
             maxAreaAvailable = Math.max(maxAreaAvailable,  height[leftPointer] * counter);
             leftPointer += 1;
