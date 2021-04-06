@@ -90,24 +90,8 @@ const checkRomanRepresentation = function (number, iter) {
   if (getRomanEquivalent) {
     return getRomanEquivalent;
   } else {
-    if (Number(returnValue > 1000)) {
-      const quotient = Math.floor(returnValue / 1000);
-      let thousandsToBePushed = [];
-      for (let iter = 0; iter < quotient; iter++) {
-        thousandsToBePushed.push(mappingOfNumbersToRoman["1000"]);
-      }
-      const reminder = returnValue % 1000;
-      let getRomanEquivalent = mappingOfNumbersToRoman[reminder];
-      if (getRomanEquivalent) {
-        thousandsToBePushed.push(getRomanEquivalent);
-      } else {
-        let reminderRomanEquivalent = getSubsequentRomanEquivalent(reminder, iter-1, reminder, []);
-        thousandsToBePushed.push(reminderRomanEquivalent);
-      }
-      return thousandsToBePushed.join("");
-    }
     return getSubsequentRomanEquivalent(returnValue, iter - 1, returnValue, []);
   }
 };
 
-console.log(intToRoman(70)); //"MDCCLXX" MDDCCCLXX
+console.log(intToRoman(2987)); //MMCMLXXXVII
