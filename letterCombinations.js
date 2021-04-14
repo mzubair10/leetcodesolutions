@@ -11,7 +11,7 @@ const mappingOfLettersToNumbers = {
 };
 let letters;
 let combinedList;
-let listOfDigitsMapping = [];
+let listOfDigitsMapping;
 const letterCombinations = function (digits) {
   combinedList = [];
   listOfDigitsMapping = [];
